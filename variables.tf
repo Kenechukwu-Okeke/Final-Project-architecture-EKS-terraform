@@ -182,11 +182,11 @@ variable "efs_transition_to_ia" {
 variable "kubeconfig_bucket" {
   description = "S3 bucket where the admin kubeconfig is uploaded"
   type        = string
-  default     = "terrformstate-060647991200"
+  default     = "terraform-bucket-kene281"
 }
 
 variable "kubeconfig_s3_key" {
   description = "S3 object key of the admin kubeconfig"
   type        = string
-  default     = "eks/kubeconfig"
+  default     = "terraform/terraform.tfstate"
 }
