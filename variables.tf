@@ -2,20 +2,20 @@
 variable "aws_region" {
   description = "AWS region to deploy into"
   type        = string
-  default     = "us-west-1"
+  default     = "us-east-1"
 }
 
 variable "cluster_name" {
   description = "Name of the EKS cluster; also used as a prefix for related resources"
   type        = string
-  default     = "smartcloud-eks"
+  default     = "final-project-eks"
 }
 
 # ---- Networking ----
 variable "vpc_name" {
   description = "Name tag of the VPC"
   type        = string
-  default     = "smartcloud-vpc"
+  default     = "final-project-vpc"
 }
 
 variable "vpc_cidr" {
@@ -161,14 +161,14 @@ variable "letsencrypt_server" {
 variable "letsencrypt_email" {
   description = "Optional contact email for the Let's Encrypt account"
   type        = string
-  default     = "chukwunonsosmartagbawo@gmail.com"
+  default     = "Kenechukwuokeke3101@gmail.com"
 }
 
 # ---- Argo CD ----
 variable "argocd_hostname" {
   description = "Public hostname for the Argo CD UI (must match manifests/argocd-ingress.yaml)"
   type        = string
-  default     = "argocd.digitalwitch.online"
+  default     = "argocd.kenedevops.online"
 }
 
 # ---- EFS ----
