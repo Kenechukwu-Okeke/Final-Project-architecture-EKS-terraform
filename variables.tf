@@ -15,7 +15,7 @@ variable "cluster_name" {
 variable "vpc_name" {
   description = "Name tag of the VPC"
   type        = string
-  default     = "final-project-vpc"
+  default     = "final-project-vpc-new"
 }
 
 variable "vpc_cidr" {
