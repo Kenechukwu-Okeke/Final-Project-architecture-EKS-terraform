@@ -60,7 +60,7 @@ jobs:
       run: terraform validate
 
     - name: terraform force unlock
-      run: terraform force-unlock ec56f727-d9e9-a5b5-fd1e-bb74cea82d3f
+      run: terraform force-unlock -force ec56f727-d9e9-a5b5-fd1e-bb74cea82d3f
 
 
 
