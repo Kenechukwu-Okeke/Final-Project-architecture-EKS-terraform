@@ -31,7 +31,7 @@ jobs:
       with:
         terraform_version: ${{ env.TF_VERSION }}
         terraform_wrapper: false
-        
+
 
     - name: Inspect GitHub OIDC claims
       run: |
@@ -243,11 +243,3 @@ jobs:
     #       run: terraform destroy -auto-approve
 
 
-    - name: Inspect GitHub OIDC claims
-      run: |
-       TOKEN=$(curl -s \
-       -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
-       "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=sts.amazonaws.com" \
-       | jq -r '.value')
-
-       echo "$TOKEN" | cut -d '.' -f2 | base64 -d | jq '{sub, aud, repository, ref}'
