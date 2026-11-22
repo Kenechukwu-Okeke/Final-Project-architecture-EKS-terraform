@@ -101,7 +101,7 @@ jobs:
     # # #   # ---------------------------------------------------------------------------
   plan-apply:
     name: terraform plan and apply
-    #needs: [sonar-scan]  
+    needs: [sonar-scan]  
     if: ${{ !inputs.destroy }}
     runs-on: ubuntu-latest
     steps:
@@ -129,7 +129,7 @@ jobs:
     # # #   # ---------------------------------------------------------------------------
   test:
     name: verify deployment
-    # needs: [plan-apply]
+    needs: [plan-apply]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
