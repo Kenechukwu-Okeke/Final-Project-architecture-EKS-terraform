@@ -93,13 +93,13 @@ variable "node_disk_size" {
 variable "node_desired_size" {
   description = "Desired number of worker nodes"
   type        = number
-  default     = 5 # 4 x t2.medium hit the 17-pods-per-node limit
+  default     = 4 # 4 x t2.medium hit the 17-pods-per-node limit
 }
 
 variable "node_min_size" {
   description = "Minimum number of worker nodes"
   type        = number
-  default     = 5
+  default     = 4
 }
 
 variable "node_max_size" {
